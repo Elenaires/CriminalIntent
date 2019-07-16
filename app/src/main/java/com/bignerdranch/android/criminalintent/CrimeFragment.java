@@ -54,7 +54,8 @@ public class CrimeFragment extends Fragment {
         });
 
         mDateButton = v.findViewById(R.id.crime_date);
-        mDateButton.setText(mCrime.getDate().toString());
+        //mDateButton.setText(mCrime.getDate().toString());
+        mDateButton.setText(mCrime.formatDate());
 
         // will not respond to user pressing
         mDateButton.setEnabled(false);

@@ -1,6 +1,11 @@
 package com.bignerdranch.android.criminalintent;
 
+import android.text.format.DateFormat;
+
+import java.text.FieldPosition;
+import java.text.ParsePosition;
 import java.util.Date;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -47,4 +52,10 @@ public class Crime {
     public void setSolved(boolean solved) {
         mSolved = solved;
     }
+
+    public String formatDate() {
+        String df = DateFormat.getBestDateTimePattern(Locale.US, "EEE, MMM dd, yyyy");
+        return DateFormat.format(df, mDate).toString();
+   }
+
 }
